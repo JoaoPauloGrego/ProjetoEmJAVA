@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>        
+        function Site() {
+            
+            var Nome = document.Form1.Login.value;
+            var Senha = document.Form1.Senha.value;
+
+            $mensagem=""
+            
+            if ((Nome == "João Paulo") && (Senha == "1")) 
+            {
+                $mensagem = "Bem vindo ao site!"
+                //alert("Bem vindo ao site!");
+                //return true; // Permitir envio do formulário
+            } else {
+                //alert("Login ou senha incorretos!");
+                $mensagem = "Login ou senha incorretos!"
+        
+            }
+            document.write("<center><font size '5'> Green Harmonia <br> </center>")
+            document.write($mensagem)
+
+            return false; // Impedir envio do formulário
+        
+            
+
+        }
+    </script>
+
+    <form action="" method="post" name="Form1" onsubmit="return Site()">
+        <center>
+            <input type="text" name="Login" placeholder="Login"> <br>
+            <input type="password" name="Senha" placeholder="Senha"> <br>
+            <input type="submit" name="Enviar"><br>
+        </center>
+    </form>
+</body>
+
+</html>
